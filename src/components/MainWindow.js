@@ -66,7 +66,7 @@ const filterMonth = (item) => {
 	  	setData({});
 
 	    const result = await axios(
-	      `http://acnhapi.com/v1/${renderSwitch(category)}/`,
+	      `https://acnhapi.com/v1/${renderSwitch(category)}/`,
 	    );
 
         setLoading(false);
