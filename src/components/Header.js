@@ -63,7 +63,7 @@ const Header = ({ className }) => {
 	}, [currTime, checked])
 
     return (
-      <header className="p-2 shadow flex justify-between">
+      <header className={`${lightToggle} p-2 shadow flex justify-between`}>
       <button className={`${styles.lightMode} ${lightToggle}`} onClick={toggleTheme}>{theme === true ? 'Dark Mode' : 'Light Mode'}</button>
 
       <div className={styles.inputs}>

@@ -74,7 +74,8 @@ import {useState, createContext, useContext, useEffect, useReducer} from 'react'
   	}
 
   	const toggleTheme = () => {
-    	setTheme(prevTheme => !prevTheme)
+      document.body.classList.toggle('active');
+    	setTheme(prevTheme => !prevTheme);
   	}
   	const toggleModal = (name) => {
       if(name !== null){
