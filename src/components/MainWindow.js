@@ -92,7 +92,7 @@ const filterMonth = (item) => {
           
       })}
 
-        {loading ? <img className="mx-auto my-4" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" /> : null}
+        {loading ? <img className="mx-auto my-4" src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" /> : null}
         </div>
     );
 };

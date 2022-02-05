@@ -18,8 +18,8 @@ body{font-family: 'Asap', sans-serif; background-color: #FFFFFA; background-imag
 .categories button{padding: 2rem; flex: 1 1 auto;}
 
 .modal-active{overflow:hidden;}
-.backdrop{position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,.5);}
-.modal{position: fixed; right: 50%; bottom: 50%; transform: translate(50%, 50%); overflow: scroll; width: 100%; max-width: 768px; padding-top: 4em; padding-bottom: 2rem; max-height: 90%;}
+.backdrop{z-index: 1000;position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,.5);}
+.modal{z-index: 1000;position: fixed; right: 50%; bottom: 50%; transform: translate(50%, 50%); overflow: scroll; width: 100%; max-width: 768px; padding-top: 4em; padding-bottom: 2rem; max-height: 90%;}
 
 .card .active >*:not(svg){opacity: .10;}
 

@@ -9,7 +9,7 @@ const renderSwitch =(param, info) => {
       return (
       	<>
       		<img className="mx-auto" src={info["image_uri"]} />
-      		<h2>{info.name["name-USen"]}</h2>
+      		<h2 className="capitalize font-bold text-xl">{info.name["name-USen"]}</h2>
       		<br />
       		<p>Nooklings Price: {info.price} bells</p>
       		<p>CJ Price: {info["price-cj"]} bells</p>
@@ -23,7 +23,7 @@ const renderSwitch =(param, info) => {
       return (
         <>
       		<img className="mx-auto" src={info["image_uri"]} />
-      		<h2>{info.name["name-USen"]}</h2>
+      		<h2 className="capitalize font-bold text-xl">{info.name["name-USen"]}</h2>
       		<br />
       		<p>Nooklings Price: {info.price} bells</p>
       		<p>CJ Price: {info["price-cj"]} bells</p>
@@ -38,7 +38,7 @@ const renderSwitch =(param, info) => {
       return (
         <>
       		<img className="mx-auto" src={info["image_uri"]} />
-      		<h2>{info.name["name-USen"]}</h2>
+      		<h2 className="capitalize font-bold text-xl">{info.name["name-USen"]}</h2>
       		<br />
       		<p>Nooklings Price: {info.price} bells</p>
       		<p>CJ Price: {info["price-flick"]} bells</p>
@@ -52,7 +52,7 @@ const renderSwitch =(param, info) => {
       return (
         <>
       		<img className="mx-auto" src={info["image_uri"]} />
-      		<h2>{info.name["name-USen"]}</h2>
+      		<h2 className="capitalize font-bold text-xl">{info.name["name-USen"]}</h2>
       		<br />
       		<p>Nooklings Price: {info.price} bells</p>
       		<br />
@@ -63,7 +63,7 @@ const renderSwitch =(param, info) => {
       return (
         <>
       		<img className="mx-auto" src={info["image_uri"]} />
-      		<h2>{info.name["name-USen"]}</h2>
+      		<h2 className="capitalize font-bold text-xl">{info.name["name-USen"]}</h2>
       		<br />
       		<p>Has Fakes: {info.hasFake == true ? "Yes" : "No"}</p>
       		<br />

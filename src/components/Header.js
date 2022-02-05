@@ -4,7 +4,7 @@ import {useTheme, useThemeUpdate, useFilter} from '../store/ThemeContext.js';
 import CurrentTime from './CurrentTime';
 import {FaCheck} from 'react-icons/fa';
 import styles from './Header.module.css';
-
+import {convertToMonth, convertToHour} from '../utils.js'
 
 
 
@@ -108,8 +108,8 @@ const Header = ({ className }) => {
 <option value="20">20:00</option>
 <option value="21">21:00</option>
 <option value="22">22:00</option>
-<option value="23">24:00</option>
-
+<option value="23">23:00</option>
+<option value="0">24:00</option>
       </select>
 
       <select onChange={handleHemisphere}>
@@ -128,7 +128,7 @@ const Header = ({ className }) => {
 <CurrentTime />
 
       <div>
-      Currently Selected: {month}, {time}, {hemisphere}
+      Currently Selected: {convertToMonth(month)}, {convertToHour(time)}, <span className="capitalize">{hemisphere}</span>
       </div>
       </header>  
     );

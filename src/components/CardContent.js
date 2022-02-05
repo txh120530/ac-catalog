@@ -34,7 +34,7 @@ const CardContent = (data) => {
 
     const Icons = ({name}) => {
       return (<>
-        <i  data-tip="More Info"><FaSearch  style={{ color: '#81F1F7'}} onClick={() => toggleModal(name)} /></i>
+        <FaSearch data-tip="More Info"  style={{ color: '#81F1F7'}} onClick={() => toggleModal(name)} />
          <br/>
          { checkItem(name) == true ? <i><FaTimes data-tip="Remove from Collection" style={{ color: '#81F1F7'}} onClick={() => handleClick(name)} /></i> : <i><FaCheck  data-tip="I Have This!" style={{ color: '#81F1F7'}} onClick={() => handleClick(name)}/></i>}
          </>);
@@ -48,7 +48,7 @@ const renderSwitch =(param) => {
         <div className={`text-center ${items.includes(info["file-name"]) ? "active" : ""}`}>
           <Icons name={info["file-name"]}/>
       		<img className="mx-auto" src={info.icon_uri} />
-      		<h3 className="font-bold">{info.name["name-USen"]}</h3>
+      		<h3 className="font-bold capitalize">{info.name["name-USen"]}</h3>
       	</div>
 
         {modal !== null && modal === info["file-name"] ? <Modal infoID={info["file-name"]}><ModalContent type="fish" info={info}> </ModalContent></Modal> : null}
@@ -60,7 +60,7 @@ const renderSwitch =(param) => {
         <div className={`text-center ${items.includes(info["file-name"]) ? "active" : ""}`}>
           <Icons name={info["file-name"]}/>
           <img className="mx-auto" src={info.icon_uri} />
-          <h3 className="font-bold">{info.name["name-USen"]}</h3>
+          <h3 className="font-bold capitalize">{info.name["name-USen"]}</h3>
         </div>
 
         {modal !== null && modal === info["file-name"] ? <Modal infoID={info["file-name"]}><ModalContent type="sea" info={info}> </ModalContent></Modal> : null}
@@ -73,7 +73,7 @@ const renderSwitch =(param) => {
         <div className={`text-center ${items.includes(info["file-name"]) ? "active" : ""}`}>
           <Icons name={info["file-name"]}/>
           <img className="mx-auto" src={info.icon_uri} />
-          <h3 className="font-bold">{info.name["name-USen"]}</h3>
+          <h3 className="font-bold capitalize">{info.name["name-USen"]}</h3>
         </div>
 
         {modal !== null && modal === info["file-name"] ? <Modal infoID={info["file-name"]}><ModalContent type="bugs" info={info}> </ModalContent></Modal> : null}
@@ -85,7 +85,7 @@ const renderSwitch =(param) => {
         <div className={`text-center ${items.includes(info["file-name"]) ? "active" : ""}`}>
           <Icons name={info["file-name"]}/>
           <img className="mx-auto" src={info.image_uri} />
-          <h3 className="font-bold">{info.name["name-USen"]}</h3>
+          <h3 className="font-bold capitalize">{info.name["name-USen"]}</h3>
         </div>
 
         {modal !== null && modal === info["file-name"] ? <Modal infoID={info["file-name"]}><ModalContent type="fossils" info={info}> </ModalContent></Modal> : null}
@@ -97,7 +97,7 @@ const renderSwitch =(param) => {
         <div className={`text-center ${items.includes(info["file-name"]) ? "active" : ""}`}>
           <Icons name={info["file-name"]}/>
           <img className="mx-auto" src={info.image_uri} />
-          <h3 className="font-bold">{info.name["name-USen"]}</h3>
+          <h3 className="font-bold capitalize">{info.name["name-USen"]}</h3>
         </div>
 
         {modal !== null && modal === info["file-name"] ? <Modal infoID={info["file-name"]}><ModalContent type="art" info={info}> </ModalContent></Modal> : null}
