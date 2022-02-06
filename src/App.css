@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
 
 body{font-family: 'Asap', sans-serif;padding-top: 5rem;background-color: #010101;}
-body:after{content: ''; z-index: -1; top: 0; right: 0; bottom: 0; left: 0;   background-image: url(https://catwithmonocle.com/wp-content/uploads/2020/03/ac-new-horizons-leaf-pattern-v2-1280x1024-1.jpg);  position: absolute;}
+body:after{content: ''; z-index: -1; top: 0; right: 0; bottom: 0; left: 0;   background-image: url(https://catwithmonocle.com/wp-content/uploads/2020/03/ac-new-horizons-leaf-pattern-v2-1280x1024-1.jpg);  position: fixed;}
 body.active:after{opacity: .4;}
 
 body.active{color: #fff;}
