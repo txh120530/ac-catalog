@@ -29,3 +29,6 @@ body.active{color: #fff;}
 .card .active >*:not(svg){opacity: .10;}
 
 .disabled{opacity: .3; pointer-events: none;}
+
+#navbar{background-color: #fff; color: #ae782b;  width: 255px; height: 100vh; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; padding: 10px; position: fixed; top: 0; left: -100%; z-index: 1000; transition: .3s;}
+#navbar.active{left: 0;}

@@ -15,3 +15,5 @@ select{background-color: rgba(157,255,176, .3); border-radius: 8px;  padding: .2
 .lightMode{font-weight: 700; text-transform: uppercase; border: 8px; padding: .4rem; background-color: rgba(129,241,247, .2);  color: #ae782b;}
 .lightMode.active{background-color: rgba(129,241,247, 1); }
 
+
+
