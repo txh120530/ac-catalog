@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
 
+
 body{font-family: 'Asap', sans-serif;padding-top: 5rem;background-color: #010101;}
 body:after{content: ''; z-index: -1; top: 0; right: 0; bottom: 0; left: 0;   background-image: url(https://catwithmonocle.com/wp-content/uploads/2020/03/ac-new-horizons-leaf-pattern-v2-1280x1024-1.jpg);  position: fixed;}
 body.active:after{opacity: .4;}
@@ -20,7 +21,7 @@ body.active{color: #fff;}
 
 }
 
-.categories button{padding: 2rem; flex: 1 1 auto;}
+.categories button{padding: .2rem; flex: 1 1 auto;}
 
 .modal-active{overflow:hidden;}
 .backdrop{z-index: 1000;position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,.5);}
@@ -30,5 +31,28 @@ body.active{color: #fff;}
 
 .disabled{opacity: .3; pointer-events: none;}
 
-#navbar{background-color: #fff; color: #ae782b;  width: 255px; height: 100vh; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; padding: 10px; position: fixed; top: 0; left: -100%; z-index: 1000; transition: .3s;}
+#navbar{background-color: #fff; color: #ae782b; font-weight: 700;  width: 255px; height: 100vh; display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; padding: 10px; position: fixed; top: 0; left: -100%; z-index: 1000; transition: .3s;}
 #navbar.active{left: 0;}
+
+#navbar div > *{margin-top: .5em;}
+
+.checkBox{position: relative; display: flex; cursor: pointer; }
+.checkBox input {display: none;}
+.checkMark{width: 30px; height: 30px; line-height: 30px; color: #ae782b; text-align: center; border-radius: 8px; background-color: rgba(157,255,176, .2); display: inline-block; vertical-align: middle; margin-left: 5px;}
+.checkMark svg{display: inline; opacity: 0;}
+.checkBox input:checked ~ .checkMark {
+  background-color: rgba(157,255,176, 1);
+}
+.checkBox input:checked ~ .checkMark svg{opacity: 1;}
+
+select{background-color: rgba(157,255,176, .3); border-radius: 8px;  padding: .2rem; min-width: 200px;}
+.inputs >*{margin: 0 .2em;}
+
+.currTime{  white-space: pre;}
+
+#navbar .currTime, #navbar .currSelected{margin-top: 1em;}
+
+
+@media (min-width: 1024px){
+	.categories button{padding: 2rem;}
+}

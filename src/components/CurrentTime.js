@@ -6,15 +6,15 @@ const CurrentTime = ({ className }) => {
 
 useEffect(() => {
   const timer = setTimeout(() => {
-  	setCurrTime(moment().format('MMMM Do YYYY, h:mm:ss a'))
+  	setCurrTime(moment().format('MMMM Do YYYY,[\r\n] h:mm:ss a'))
   }, 1000);
   return () => clearTimeout(timer);
 }, [currTime]);
 
     return (
-        <>
+        <div className="currTime">
         {currTime}
-        </>
+        </div>
     );
 };
 

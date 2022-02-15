@@ -62,11 +62,11 @@ const NavContents = ({ className }) => {
 
 
     return (
-      <>
+      <div>
 
           <button className={`${styles.lightMode} ${lightToggle}`} onClick={toggleTheme}>{theme === true ? 'Dark Mode' : 'Light Mode'}</button>
 
-      <div className={styles.inputs}>
+      <div className="inputs">
       <select className={checked == true ? 'disabled' : null} onChange={handleMonth}>
 
 		<option value="-1">Select a Month</option>
@@ -117,21 +117,16 @@ const NavContents = ({ className }) => {
 	<option value="southern">Southern Hemisphere</option>
 </select>
 
-<label className={styles.checkBox}>
+<label className="checkBox">
         <input type="checkbox"  checked={checked} onChange={handleCurrent}/>
-        Show Only Available Now
+        <span className="inline-block v-middle">Show Only Available Now</span>
 
-        <span className={styles.checkMark}>{<FaCheck/>}</span>
+        <span className="checkMark">{<FaCheck/>}</span>
 </label> 
 </div>
 
-<CurrentTime />
 
-      <div>
-      Currently Selected: {convertToMonth(month)}, {convertToHour(time)}, <span className="capitalize">{hemisphere}</span>
-      </div>
-
-      </>  
+      </div>  
     );
 };
 

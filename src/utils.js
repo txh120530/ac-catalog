@@ -1,7 +1,7 @@
 export function convertToMonth(num) {
   switch(num){
   	case -1:
-  	return 'None Selected'
+  	return 'Unselected'
   	break;
   	case 1:
   	return 'January'
@@ -48,7 +48,7 @@ export function convertToMonth(num) {
 export function convertToHour(num){
 	switch(num){
 		case -1:
-  		return 'None Selected'
+  		return 'Unselected'
   		break;
   		case 1:
   		return '1:00 AM'

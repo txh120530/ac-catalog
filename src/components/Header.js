@@ -2,13 +2,28 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import {useTheme, useThemeUpdate, useFilter} from '../store/ThemeContext.js';
 import NavContents from './NavContents';
+import CurrentTime from './CurrentTime';
+import SelectedTime from './SelectedTime';
 import {FaCheck, FaBars, FaTimes} from 'react-icons/fa';
 import ReactDOM from 'react-dom';
 import styles from './Header.module.css';
 
 
+const DesktopContents = () => {
+	return (
+		<>
+		ReactDOM.createPortal(<NavContents />, document.getElementById('navbar')) <SelectedTime /> <CurrentTime/>
+		</>
+	)
+}
 
-
+const MobileContents = () => {
+	return (
+		<>
+		ReactDOM.createPortal(<><NavContents /><SelectedTime /><CurrentTime /></>, document.getElementById('navbar'))
+		</>
+	)
+}
 
 
 
@@ -26,36 +41,33 @@ const Header = ({ className }) => {
 	const [windowSize, setWindowSize] = useState({
     width: undefined,
     height: undefined,
-  });
+	  });
+	  const [domReady, setDomReady] = useState(false)
+
   useEffect(() => {
-    // Handler to call on window resize
+  	    setDomReady(true)
     function handleResize() {
-      // Set window width/height to state
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     }
-    // Add event listener
     window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with initial window size
     handleResize();
-    // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
 
     return (
     	<>
-      <header className={`${lightToggle} p-2 shadow flex justify-between`}>
-      <FaBars className="block lg:hidden" onClick={showSidebar}/>
+      <header className={`${lightToggle} p-2 drop-shadow flex justify-between items-center leading-tight`}>
+      <FaBars size={27} onClick={showSidebar}/>
 
-      
-  	  {windowSize.width < 1024 ? ReactDOM.createPortal(<NavContents />, document.getElementById('navbar')) : <NavContents />}	
+      {!domReady ? null :  windowSize.width < 1024 ? <>{ReactDOM.createPortal(<><NavContents /><SelectedTime /><CurrentTime /></>, document.getElementById('navbar'))}</> : <>{ReactDOM.createPortal(<NavContents />, document.getElementById('navbar'))} <SelectedTime /> <CurrentTime/></>}	
 
       </header>
 
-      <nav id="navbar" className={sidebarActive ? `active` : null}>
-      	<FaTimes  onClick={showSidebar}/>
+      <nav id="navbar" className={"shadow-md " + (sidebarActive ? `active` : null)}>
+      	<FaTimes  size={27}  onClick={showSidebar}/>
 
       </nav>
       </>
